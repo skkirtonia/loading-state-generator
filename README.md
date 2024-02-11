@@ -5,3 +5,10 @@ There are three type of loading constraints considered in this project. Below th
 1. Single-car constraint: Certain type of car can not be assigned to certain slots. For Example, T3 automobile can not be assigned to slot 1.
 2. Pairwise constraint: If certain type of automobile is assigned to certain slot, some type of automobile can no te assigned to some other slots. For example, If T2 automobile is assigned to slot 1, T3 automobile can not be assigned to slot 2.
 3. Multiple space constraint: If some type of automobile is assigned to certain slot it also occupies some other slots. For example, assigning T3 automobile to slot 2 also occupies slot 3.
+## What dose this class do?
+The LoadingStatesGenerator class takes information about the automobile type, slot ids and the loading constraint to be initialized. The output is a lost of all feasible assignments of automobiles to the auto-carrier slots so that the assignemts do not violate the prohibitions defined by the loading constraints. Each feasible assignment is called loading state. 
+## Preparing input
+Suppose we have a 3-slot auto-carrier and have three automobiles with automobile id 1, 2 and 3 and their corresponding types are T1, T2 and T3, respectively.
+```python
+am_types = {1: "T1", 2: "T2", 3: "T3"}
+```
