@@ -8,7 +8,14 @@ There are three type of loading constraints considered in this project. Below th
 ## What dose this class do?
 The LoadingStatesGenerator class takes information about the automobile type, slot ids and the loading constraint to be initialized. The output is a lost of all feasible assignments of automobiles to the auto-carrier slots so that the assignemts do not violate the prohibitions defined by the loading constraints. Each feasible assignment is called loading state. 
 ## Preparing input
-Suppose we have a 3-slot auto-carrier and have three automobiles with automobile id 1, 2 and 3 and their corresponding types are T1, T2 and T3, respectively.
+Suppose we have a 3-slot auto-carrier and have three automobiles with automobile id 1, 2 and 3 and their corresponding types are T1, T2 and T3, respectively. The inputs am_types, slot_ids are defined as below:
 ```python
 am_types = {1: "T1", 2: "T2", 3: "T3"}
+slot_ids = [1, 2, 3]
 ```
+The three types of constraints are defined for input as follows:
+'''
+# a list of tuples where each item (t, s) indicates that automobiles of type t can not be assigned to slot s
+single_car = [("T3", 1)]
+'''
+constraints = (single_car, double_slot, pairwise)
