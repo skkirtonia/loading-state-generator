@@ -30,9 +30,6 @@ Mathematical formulation:
 | $M$  | A very large number |
 |**Decision Variable**|<!-- --> |
 | $x_i$  | Assigned slot number of automobile $i$ |
-| $y_u$  | 1 if constraint $u$ is active, 0 otherwise|
-| $y_v$  | 1 if constraint $v$ is active, 0 otherwise|
-| $y_w$  | 1 if constraint $w$ is active, 0 otherwise|
 
 #### Constraints
 Since $x_i$ indicates the slot number of the automobile %i%, slot number for each automobile must be unique which is represented by the following global constraint.
@@ -41,8 +38,12 @@ Single car constraints:
 $$x_i \neq s \quad \forall i \in I_t, \forall(t, s)\in C_s$$
 
 Pairwise constraints: 
-$$x_i \leq s_1 + M.y_u \quad \forall i_1 \in I_{t_1}, \forall i_2 \in I_{t_2}, \forall(t_1, s_1, t_2, s_2)\in C_s$$
-$$x_i \geq s_1 - M.y_u \quad \forall i_1 \in I_{t_1}, \forall i_2 \in I_{t_2}, \forall(t_1, s_1, t_2, s_2)\in C_s$$
+$$if \quad x_{i_1} = s_1, \quad then \quad x_{i_2} \neq s_2 \quad \forall i_1 \in I_{t_1}, \forall i_2 \in I_{t_2}, \forall(t_1, s_1, t_2, s_2)\in C_s$$
+Double slot constraints: 
+$$if \quad x_{i_1} = s_1, \quad then \quad x_{i_2} \neq s_2 \quad \forall i_2 \in I\setminus i_1, \forall i_1 \in I_{t_1}, \forall(t_1, s_1, s_2)\in C_s$$
+
+Domain of the variables:
+$$x_i \in \lbrace 1,2,..., |S| \rbrace \quad \forall i \in I$$
 
 ## Preparing input
 Suppose we have a 3-slot auto-carrier and have three automobiles with automobile id 1, 2 and 3 and their corresponding types are T1, T2 and T3, respectively. The inputs am_types, slot_ids are defined as below:
