@@ -20,7 +20,7 @@ Mathematical formulation:
 | $C_s$  | Set of single car constraints |
 | $C_d$  | Set of double slot constraints |
 | $C_p$  | Set of pairwise constraints |
-| $T^t$  | Set of automobiles of type $t$ |
+| $I^t$  | Set of automobiles of type $t$ |
 |**Index**|<!-- --> |
 | $i$  | Index of automobiles |
 | $s$, $s_1$ or $s_2$  | Index of auto-carrier slots |
@@ -38,9 +38,9 @@ Single car constraints:
 $$x_i \neq s \quad \forall i \in I_t, \forall(t, s)\in C_s$$
 
 Pairwise constraints: 
-$$if \quad x_{i_1} = s_1, \quad then \quad x_{i_2} \neq s_2 \quad \forall i_1 \in I_{t_1}, \forall i_2 \in I_{t_2}, \forall(t_1, s_1, t_2, s_2)\in C_s$$
+$$if \quad x_{i_1} = s_1, \quad then \quad x_{i_2} \neq s_2 \quad \forall i_1 \in I^{t_1}, \forall i_2 \in I^{t_2}, \forall(t_1, s_1, t_2, s_2)\in C_s$$
 Double slot constraints: 
-$$if \quad x_{i_1} = s_1, \quad then \quad x_{i_2} \neq s_2 \quad \forall i_2 \in I\setminus i_1, \forall i_1 \in I_{t_1}, \forall(t_1, s_1, s_2)\in C_s$$
+$$if \quad x_{i_1} = s_1, \quad then \quad x_{i_2} \neq s_2 \quad \forall i_2 \in I\setminus i_1, \forall i_1 \in I^{t}, \forall(t, s_1, s_2)\in C_s$$
 
 Domain of the variables:
 $$x_i \in \lbrace 1,2,..., |S| \rbrace \quad \forall i \in I$$
