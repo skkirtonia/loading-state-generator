@@ -38,12 +38,14 @@ Single car constraints:
 $$x_i \neq s \quad \forall i \in I_t, \forall(t, s)\in C_s$$
 
 Pairwise constraints: 
-$$if \quad x_{i_1} = s_1, \quad then \quad x_{i_2} \neq s_2 \quad \forall i_1 \in I^{t_1}, \forall i_2 \in I^{t_2}, \forall(t_1, s_1, t_2, s_2)\in C_s$$
+$$if \quad x_{i_1} = s_1, \quad then \quad x_{i_2} \neq s_2 \quad \forall i_1 \in I^{t_1}, \forall i_2 \in I^{t_2}, \forall(t_1, s_1, t_2, s_2)\in C_p$$
 Double slot constraints: 
-$$if \quad x_{i_1} = s_1, \quad then \quad x_{i_2} \neq s_2 \quad \forall i_2 \in I\setminus i_1, \forall i_1 \in I^{t}, \forall(t, s_1, s_2)\in C_s$$
+$$if \quad x_{i_1} = s_1, \quad then \quad x_{i_2} \neq s_2 \quad \forall i_2 \in I\setminus i_1, \forall i_1 \in I^{t}, \forall(t, s_1, s_2)\in C_d$$
 
 Domain of the variables:
 $$x_i \in \lbrace 1,2,..., |S| \rbrace \quad \forall i \in I$$
+
+This type of conditional constraint can be modeled using the Channeling constraints available on OR-Tools.
 
 ## Preparing input
 Suppose we have a 3-slot auto-carrier and have three automobiles with automobile id 1, 2 and 3 and their corresponding types are T1, T2 and T3, respectively. The inputs am_types, slot_ids are defined as below:
