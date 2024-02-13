@@ -38,7 +38,7 @@ Mathematical formulation:
 | $x_i$  | Assigned slot number of automobile $i$ |
 
 #### Constraints
-Since $x_i$ indicates the slot number of the automobile %i%, slot number for each automobile must be unique which is represented by the following global constraint.
+Since $x_i$ indicates the slot number of the automobile $i$, slot number for each automobile must be unique which is represented by the following global constraint.
 $$alldifferent(x_i)$$
 Single car constraints: 
 $$x_i \neq s \quad \forall i \in I_t, \forall(t, s)\in C_s$$
