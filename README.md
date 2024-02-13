@@ -1,6 +1,8 @@
 ## Background
 This is a part of code I used in the computation analysis of my dissertation and published an article (Kirtonia, et al., 2023).
-Automobiles are transported using large trucks which is know as auto-carriers. There are some fixed number of slots that holds the automobiles are known as auto-carrier slots. Automobiles can be of various typoes depending on the size of them. We define three types of automobiles as Type 1 (T1), Type 2 (T2) and Type 3 (T3) that represents small, medium and large automobiles. There are various rules depending on the auto-carrier structure and automobile types that prohibit the automobile assignment to the auto-carrier slots. Those rules are called loading constraints. 
+Automobiles are transported using large trucks which is know as auto-carriers. There are some fixed number of slots that holds the automobiles are known as auto-carrier slots. Automobiles can be of various types depending on the size of them. We define three types of automobiles as Type 1 (T1), Type 2 (T2) and Type 3 (T3) that represents small, medium and large automobiles. There are various rules depending on the auto-carrier structure and automobile types that prohibit the automobile assignment to the auto-carrier slots. Those rules are called loading constraints. A loading state indicates a feasible assignment of automobiles to the auto-carrier slots. The following figure shows how these assignments are represented as an array of automobile ids.
+
+![Test Image 1](loading state.png)
 ## Loading constraints
 There are three type of loading constraints considered in this project (Chen, 2016). Below the loading costraints are described:
 1. Single-car constraint: Certain type of car can not be assigned to certain slots. For Example, T3 automobile can not be assigned to slot 1.
