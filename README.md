@@ -7,13 +7,14 @@ Automobiles are transported using large trucks which are known as auto-carriers.
 <p align="center">
     Figure 1: Loading state representation
 </p>
+
 ## Loading constraints
-There are three types of loading constraints considered in this project (Chen, 2016). Below the loading constraints are described: <br/>
+There are three types of loading constraints considered in this project (Chen, 2016). Below the loading constraints are described: <br/> 
 1. **Single-car constraint**: Certain types of cars can not be assigned to certain slots. For Example, T3 automobile can not be assigned to slot 1.<br/>
 2. **Pairwise constraint:** If a certain type of automobile is assigned to a certain slot, some type of automobile cannot be assigned to some other slots. For example, if T2 automobile is assigned to slot 1, T3 automobile can not be assigned to slot 2.<br/>
 3. **Double slot constraint:** If some type of automobile is assigned to a certain slot it also occupies some other slots. For example, assigning T3 automobile to slot 2 also occupies slot 3.<br/>
 ## What does this class do?
-The LoadingStatesGenerator class takes information about the automobile type, slot IDs and the loading constraint to be initialized. The output is a list of all feasible assignments of automobiles to the auto-carrier slots so that the assignments do not violate the prohibitions defined by the loading constraints. Each feasible assignment is called a loading state. 
+The LoadingStatesGenerator class takes information about the automobile type, slot IDs and the loading constraint to be initialized. The output is a list of all feasible assignments of automobiles to the auto-carrier slots so that the assignments do not violate the prohibitions defined by the loading constraints. Each feasible assignment is called a loading state.
 
 ## Solution approach
 This problem is formulated as a Constraint Programming Problem and solved by Google's OR-Tools Python library. 
