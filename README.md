@@ -1,5 +1,5 @@
 ## Background
-This is a part of the code I used in the computation analysis of my dissertation and published an article (Kirtonia, et al., 2023).
+This is a part of the code I used in the computation analysis of my dissertation and published an article (Kirtonia, et al., 2023).<br/>
 Automobiles are transported using large trucks which are known as auto-carriers. There are some fixed number of slots that hold automobiles are known as auto-carrier slots. Automobiles can be of various types depending on the size of them. We define three types of automobiles as Type 1 (T1), Type 2 (T2), and Type 3 (T3) that represents small, medium and large automobiles. Various rules depending on the auto-carrier structure and automobile types prohibit the automobile assignment to the auto-carrier slots. Those rules are called loading constraints. A loading state indicates a feasible assignment of automobiles to the auto-carrier slots. The following Figure 1 shows how these assignments are represented as an array of automobile IDs.
 <p align="center">
     <img src='loading-state.png' width='650'>
@@ -8,10 +8,10 @@ Automobiles are transported using large trucks which are known as auto-carriers.
     Figure 1: Loading state representation
 </p>
 ## Loading constraints
-There are three types of loading constraints considered in this project (Chen, 2016). Below the loading constraints are described:
-1. Single-car constraint: Certain types of cars can not be assigned to certain slots. For Example, T3 automobile can not be assigned to slot 1.
-2. Pairwise constraint: If a certain type of automobile is assigned to a certain slot, some type of automobile cannot be assigned to some other slots. For example, if T2 automobile is assigned to slot 1, T3 automobile can not be assigned to slot 2.
-3. Double slot constraint: If some type of automobile is assigned to a certain slot it also occupies some other slots. For example, assigning T3 automobile to slot 2 also occupies slot 3.
+There are three types of loading constraints considered in this project (Chen, 2016). Below the loading constraints are described: <br/>
+1. **Single-car constraint**: Certain types of cars can not be assigned to certain slots. For Example, T3 automobile can not be assigned to slot 1.<br/>
+2. **Pairwise constraint:** If a certain type of automobile is assigned to a certain slot, some type of automobile cannot be assigned to some other slots. For example, if T2 automobile is assigned to slot 1, T3 automobile can not be assigned to slot 2.<br/>
+3. **Double slot constraint:** If some type of automobile is assigned to a certain slot it also occupies some other slots. For example, assigning T3 automobile to slot 2 also occupies slot 3.<br/>
 ## What does this class do?
 The LoadingStatesGenerator class takes information about the automobile type, slot IDs and the loading constraint to be initialized. The output is a list of all feasible assignments of automobiles to the auto-carrier slots so that the assignments do not violate the prohibitions defined by the loading constraints. Each feasible assignment is called a loading state. 
 
